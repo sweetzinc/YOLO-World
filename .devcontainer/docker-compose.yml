@@ -1,0 +1,21 @@
+services:
+  asn-yolo:
+    build: 
+      context: .
+      dockerfile: Dockerfile 
+    image: asn-yolo-image
+    container_name: asn-yolo-container 
+    volumes:
+      # - ./workspace:/workspace
+      # - /mnt/c/docker_share:/shared_data
+      - C:\docker_share:/data:cached 
+      # - C:\Users\Stephanie\repos\clones\YOLO-World:/yolo-world:cached
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    tty: true
+    stdin_open: true
