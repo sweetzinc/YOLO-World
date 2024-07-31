@@ -8,7 +8,8 @@ services:
     volumes:
       # - ./workspace:/workspace
       # - /mnt/c/docker_share:/shared_data
-      - C:\docker_share:/data:cached 
+      - C:\docker_share\yolo-world\weights:/workspaces/YOLO-World/weights:cached 
+      - C:\docker_share\yolo-world\data:/workspaces/YOLO-World/data:cached 
       # - C:\Users\Stephanie\repos\clones\YOLO-World:/yolo-world:cached
     deploy:
       resources:
