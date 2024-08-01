@@ -9,8 +9,9 @@ services:
       # - ./workspace:/workspace
       # - /mnt/c/docker_share:/shared_data
       - C:\docker_share\yolo-world\weights:/workspaces/YOLO-World/weights:cached 
-      - C:\docker_share\yolo-world\data:/workspaces/YOLO-World/data:cached 
-      # - C:\Users\Stephanie\repos\clones\YOLO-World:/yolo-world:cached
+      - C:\docker_share\yolo-world\data\coco:/workspaces/YOLO-World/data/coco:cached 
+      - C:\docker_share\yolo-world\data\objects365v1:/workspaces/YOLO-World/data/objects365v1:cached 
+      - C:\docker_share\yolo-world\output:/workspaces/YOLO-World/output:cached 
     deploy:
       resources:
         reservations:
